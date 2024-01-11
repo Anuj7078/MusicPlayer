@@ -1,0 +1,194 @@
+*{
+    box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+.container1{
+color: white;
+width: 100%;
+height: 600px;
+background-image: url('https://images.pexels.com/photos/3721941/pexels-photo-3721941.jpeg?auto=compress&cs=tinysrgb&w=600'); 
+background-position: center;
+background-size:  cover;
+background-repeat: no-repeat;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.search{
+display: flex;
+flex-direction: row;
+margin-left: 470px;
+margin-top: 230px;
+}
+h1{
+font-size: 40px;
+padding-top: 150px;
+margin-bottom: 20px;
+}
+h2{
+margin-top: 25px;
+font-size: 32px;
+font-weight: lighter;
+font-style: italic;
+}
+input[type="text"] {
+padding: 10px;
+font-size: 1em;
+width: 300px;
+}
+
+button {
+padding: 10px 20px;
+font-size: 1em;
+background-color: #302a36; 
+color: #fff;
+border: none;
+cursor: pointer;
+}
+.container2{
+width: 100%;
+height: 800px;
+background-color: rgb(0, 0, 0);
+color: white;
+}
+section {
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+.songs{
+    display: flex;
+    flex-direction: row;
+    height: 190px;
+}
+.song-box {
+    width: 15%;
+    color: black;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 1.0s;
+}
+
+.song-box:hover {
+    background-color: #f9f9f9;
+}
+
+.playing {
+    background-color: #4CAF50;
+    color: #fff;
+}
+#new-releases{
+    margin-top: 10px;
+}
+#top-charts{
+    margin-top: 10px;
+}
+#ts1{
+    background-image: url('/covers/leke prabhu ka naam.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#ts2{
+    background-image: url('/covers/kalastar.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#ts3{
+    background-image: url('/covers/udd jaa.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#ts4{
+    background-image: url('/covers/gaadi kaali.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#ts5{
+    background-image: url('/covers/gustakhiyan.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#nw1{
+    background-image: url('/covers/arjan.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#nw2{
+    background-image: url('/covers/urvashi.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#nw3{
+    background-image: url('/covers/fanaar.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#nw4{
+    background-image: url('/covers/leke prabhu ka naam.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#nw5{
+    background-image: url('/covers/satranga.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#tc1{
+    background-image: url('/covers/ram siya ram.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#tc2{
+    background-image: url('/covers/daaru badnaam.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#tc3{
+    background-image: url('/covers/heeriye.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#tc4{
+    background-image: url('/covers/khalasi.jpg');
+    background-position: center;
+    background-size: contain;
+}
+#tc5{
+    background-image: url('/covers/tere hawale.jpg');
+    background-position: center;
+    background-size: contain;
+}
+.container2{
+    width: 100%;
+    height: 520px;
+    background-image: url(https://img.freepik.com/premium-photo/black-music-notes-song-melody-flowing-air-dark-background-copy-space-your-text-article-left-concept-music-aesthetic-rhythm-3d-illustration-rendering_34515-906.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: rgb(209, 203, 203);
+    text-align: center;
+    padding: 40px;
+  }
+  .container2 h1{
+    margin-top: 30px;
+    font-size: 48px;
+    font-weight: lighter;
+  }
+  .btn{
+    margin-top: 10px;
+    color: white;
+    padding: 5px;
+    width: 140px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 15px;
+    background-color: rgb(71, 70, 70);
+  }
+  .btn:hover{
+    background-color: rgb(126, 117, 117);
+    cursor: pointer;
+  }

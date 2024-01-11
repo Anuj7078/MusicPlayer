@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/home-style.css">
+    <title>PAA Musics</title>
+</head>
+<body>
+    <%- include('navbar'); %>
+    <div class="container1">
+        <h1>Enjoy your mood with us</h1>
+        <h2>Listen to Thousands of Songs and make your <br />Mind relax here.</h2>
+        <form class="search" method="post" action="/search">
+            <input type="text" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <section id="trending">
+        <h2>Trending Songs</h2>
+        <div class="songs">
+        <div class="song-box" onclick="playPause('trending-song1')" id="ts1"></div>
+        <div class="song-box" onclick="playPause('trending-song2')" id="ts2"></div>
+        <div class="song-box" onclick="playPause('trending-song3')" id="ts3"></div>
+        <div class="song-box" onclick="playPause('trending-song4')" id="ts4"></div>
+        <div class="song-box" onclick="playPause('trending-song5')" id="ts5"></div>
+        </div>
+    </section>
+
+    <section id="new-releases">
+        <h2>New Releases</h2>
+        <div class="songs">
+        <div class="song-box" onclick="playPause('new-song1')" id="nw1"></div>
+        <div class="song-box" onclick="playPause('new-song2')" id="nw2"></div>
+        <div class="song-box" onclick="playPause('new-song3')" id="nw3"></div>
+        <div class="song-box" onclick="playPause('new-song4')" id="nw4"></div>
+        <div class="song-box" onclick="playPause('new-song5')" id="nw5"></div>
+        </div>
+    </section>
+
+    <section id="top-charts">
+        <h2>Top Charts</h2>
+        <div class="songs">
+        <div class="song-box" onclick="playPause('top-song1')" id="tc1"></div>
+        <div class="song-box" onclick="playPause('top-song2')" id="tc2"></div>
+        <div class="song-box" onclick="playPause('top-song3')" id="tc3"></div>
+        <div class="song-box" onclick="playPause('top-song4')" id="tc4"></div>
+        <div class="song-box" onclick="playPause('top-song5')" id="tc5"></div>
+    </div>
+    <div class="container2">
+        <h1>Listen Songs According to Your Mood</h1>
+        <form method="get" action="/mood">
+            <button class="btn" type="submit">Let's Go</button>
+        </form>
+      </div>
+    </section>
+    <script src="/js/home-script.js"></script>
+    <audio id="trending-song1" src="/songs/leke prabhu.mp3"></audio>
+    <audio id="trending-song2" src="/songs/kaalastar.mp3"></audio>
+    <audio id="trending-song3" src="/songs/Udd Jaa Kaale Kaava.mp3"></audio>
+    <audio id="trending-song4" src="/songs/Gaadi Kaali.mp3"></audio>
+    <audio id="trending-song5" src="/songs/Gustakhiyan.mp3"></audio>
+
+    <audio id="new-song1" src="/songs/arjan.mp3"></audio>
+    <audio id="new-song2" src="/songs/urvashi.mp3"></audio>
+    <audio id="new-song3" src="/songs/fanaar.mp3"></audio>
+    <audio id="new-song4" src="/songs/leke prabhu.mp3"></audio>
+    <audio id="new-song5" src="/songs/satranga.mp3"></audio>
+
+    <audio id="top-song1" src="/songs/ram siya ram.mp3"></audio>
+    <audio id="top-song2" src="/songs/daaru badnaam.mp3"></audio>
+    <audio id="top-song3" src="/songs/heeriye.mp3"></audio>
+    <audio id="top-song4" src="/songs/kahalasi.mp3"></audio>
+    <audio id="top-song5" src="/songs/tere hawale.mp3"></audio>
+    <%- include('footer'); %>
+</body>
+</html>

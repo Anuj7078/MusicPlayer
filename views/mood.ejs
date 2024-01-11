@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/mood-style.css">
+</head>
+<body>
+
+<div id="mood-container">
+  <h2 class="heading">How are you feeling today?</h2>
+  <div class="box">
+  <button class="option-button" onclick="selectMood('Happy') " id="happy"></button>
+  <button class="option-button" onclick="selectMood('Sad')" id="sad"></button>
+  <button class="option-button" onclick="selectMood('Excited')" id="excited"></button>
+  <button class="option-button" onclick="selectMood('Relaxed')" id="relax"></button>
+  </div>
+</div>
+
+<div id="language-container" style="display: none;">
+  <h2 class="heading">Choose a language to listen to songs</h2>
+  <div class="box">
+  <button class="option-button" onclick="selectLanguage('English')" id="english">English</button>
+  <button class="option-button" onclick="selectLanguage('Punjabi')" id="punjabi">Punjabi</button>
+  <button class="option-button" onclick="selectLanguage('Hindi')" id="hindi">Hindi</button>
+  <button class="option-button" onclick="selectLanguage('Bhojpuri')" id="bhojpuri">Bhojpuri</button>
+  </div>
+</div>
+
+<div id="playlist-container" style="display: none;">
+  <h2 class="heading">Your personalized playlist</h2>
+  <div class="playlist" id="happy-english">
+    <div class="song" onclick="playPause('happy-english', '/songs/let me love you.mp3')">Let Me Love You</div>
+    <div class="song" onclick="playPause('happy-english', '/songs/worth it.mp3')">Worth It</div>
+    <div class="song" onclick="playPause('happy-english', '/songs/makeba.mp3')">Makeba</div>
+    <div class="song" onclick="playPause('happy-english', '/songs/no lie.mp3')">No Lie</div>
+  </div>
+  <div class="playlist" id="sad-english">
+    <div class="song" onclick="playPause('sad-english', '/songs/mockinbird.mp3')">Mockinbird</div>
+    <div class="song" onclick="playPause('sad-english', '/songs/stan.mp3')">Stan</div>
+    <div class="song" onclick="playPause('sad-english', '/songs/snap.mp3')">Snap</div>
+  </div>
+  <div class="playlist" id="excited-english">
+    <div class="song" onclick="playPause('excited-english', '/songs/magneta.mp3')">Magneta Riddim</div>
+    <div class="song" onclick="playPause('excited-english', '/songs/enemy.mp3')">Enemy</div>
+    <div class="song" onclick="playPause('excited-english', '/songs/dancin.mp3')">Dancin</div>
+    <div class="song" onclick="playPause('excited-english', '/songs/taki taki.mp3')">Taki Taki</div>
+    <div class="song" onclick="playPause('excited-english', '/songs/the nights.mp3')">The Nights</div>
+    <div class="song" onclick="playPause('excited-english', '/songs/waka waka.mp3')">Waka Waka</div>
+  </div>
+  <div class="playlist" id="relaxed-english">
+    <div class="song" onclick="playPause('relaxed-english', '/songs/sorry.mp3')">Sorry</div>
+    <div class="song" onclick="playPause('relaxed-english', '/songs/death bed.mp3')">Death Bed</div>
+    <div class="song" onclick="playPause('relaxed-english', '/songs/faded.mp3')">Faded</div>
+  </div>
+  <div class="playlist" id="happy-punjabi">
+    <div class="song" onclick="playPause('happy-punjabi', '/songs/Gaadi kaali.mp3')">Gaadi Kaali</div>
+    <div class="song" onclick="playPause('happy-punjabi', '/songs/5.mp3')">Kaala Star</div>
+    <div class="song" onclick="playPause('happy-punjabi', '/songs/jine mera dil luteya.mp3')">Dil Luteya</div>
+    <div class="song" onclick="playPause('happy-punjabi', '/songs/dil le gayee.mp3')">Dil Le Gayee</div>
+  </div>
+  <div class="playlist" id="sad-punjabi">
+    <div class="song" onclick="playPause('sad-punjabi', '/songs/14.mp3')">Kya Loge tum</div>
+    <div class="song" onclick="playPause('sad-punjabi', '/songs/wakh ho jana.mp3')">Wakh Ho Jana</div>
+    <div class="song" onclick="playPause('sad-punjabi', '/songs/yaar ni mileya.mp3')">Yaar Ni Milya</div>
+    <div class="song" onclick="playPause('sad-punjabi', '/songs/qismat.mp3')">Qismat</div>
+    <div class="song" onclick="playPause('sad-punjabi', '/songs/temporary pyar.mp3')">Temporary Pyaar</div>
+  </div>
+  <div class="playlist" id="excited-punjabi">
+    <div class="song" onclick="playPause('excited-punjabi','/songs/daaru badnaam.mp3')">Daaru Badnaam</div>
+    <div class="song" onclick="playPause('excited-punjabi','/songs/Gustakhiyan.mp3')">Gustakhiyan</div>
+    <div class="song" onclick="playPause('excited-punjabi','/songs/12.mp3')">Dope Shope</div>
+    <div class="song" onclick="playPause('excited-punjabi','/songs/arjan.mp3')">Arjan</div>
+    <div class="song" onclick="playPause('excited-punjabi','/songs/11.mp3')">3 Peg</div>
+
+  </div>
+  <div class="playlist" id="relaxed-punjabi">
+    <div class="song" onclick="playPause('relaxed-punjabi','/songs/sakhiyaan.mp3')">Sakhiyaan</div>
+    <div class="song" onclick="playPause('relaxed-punjabi','/songs/khaab.mp3')">Khaab</div>
+    <div class="song" onclick="playPause('relaxed-punjabi','/songs/7.mp3')">Mi Amor</div>
+    <div class="song" onclick="playPause('relaxed-punjabi', '/songs/heeriye.mp3')">Heeriye</div>
+  </div>
+  <div class="playlist" id="happy-hindi">
+    <div class="song" onclick="playPause('happy-hindi', '/songs/mausam hai bada.mp3')">Mausam Hai Bada Qatil</div>
+    <div class="song" onclick="playPause('happy-hindi', '/songs/2.mp3')">Chaleya</div>
+    <div class="song" onclick="playPause('happy-hindi', '/songs/Udd Jaa Kaale Kaava.mp3')">Udd Jaa Kaale Kaava</div>
+    <div class="song" onclick="playPause('happy-hindi', '/songs/satranga.mp3')">Satranga</div>
+    <div class="song" onclick="playPause('happy-hindi', '/songs/kahalasi.mp3')">Kahalasi</div>
+    <div class="song" onclick="playPause('happy-hindi', '/songs/urvashi.mp3')">Urvashi</div>
+  </div>
+  <div class="playlist" id="sad-hindi">
+    <div class="song" onclick="playPause('sad-hindi', '/songs/har kisi ko nhi.mp3')">Har Kisi Ko Nahi Milta</div>
+    <div class="song" onclick="playPause('sad-hindi', '/songs/3.mp3')">Baatein Yeh Kabhi Na</div>
+    <div class="song" onclick="playPause('sad-hindi', '/songs/1.mp3')">Kya Kisi ko</div>
+    <div class="song" onclick="playPause('sad-hindi', '/songs/jeena isi ka naam h.mp3')">Kisi ki Muskurahaton pe</div>
+    <div class="song" onclick="playPause('sad-hindi', '/songs/alag aasman.mp3')">Alag Aasman</div>
+    <div class="song" onclick="playPause('sad-hindi', '/songs/kun faaya kun.mp3')">Kun Faaya Kun</div>
+    <div class="song" onclick="playPause('sad-hindi', '/songs/1.mp3')">Laree Choote</div>
+  </div>
+  <div class="playlist" id="excited-hindi">
+    <div class="song" onclick="playPause('excited-hindi', '/songs/13.mp3')">Tinku jiya</div>
+    <div class="song" onclick="playPause('excited-hindi', '/songs/first class.mp3')">First Class</div>
+    <div class="song" onclick="playPause('excited-hindi', '/songs/10.mp3')">Fully Faltu</div>
+    <div class="song" onclick="playPause('excited-hindi', '/songs/sadi gali.mp3')">Sadi Gali</div>
+    <div class="song" onclick="playPause('excited-hindi', '/songs/kamariya.mp3')">Kamariya</div>
+    <div class="song" onclick="playPause('excited-hindi', '/songs/hat ja tau.mp3')">Hat Ja Tau</div>
+  <div class="song" onclick="playPause('excited-hindi', '/songs/munni.mp3')">Munni Badnaam</div>
+  </div>
+  <div class="playlist" id="relaxed-hindi">
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/duniya.mp3')">Duniya</div>
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/kyon.mp3')">Kyon</div>
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/maahi.mp3')">Maahi</div>
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/rang langeya.mp3')">Rang Lageya</div>
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/saiyyan.mp3')">Saiyyan</div>
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/6.mp3')">Mai Agar Kahoon</div>
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/tere hawale.mp3')">Tere Hawale</div>
+    <div class="song" onclick="playPause('relaxed-hindi', '/songs/ram siya ram.mp3')">Ram Siya Ram</div>
+  </div>
+  <div class="playlist" id="happy-bhojpuri">
+    <div class="song" onclick="playPause('happy-bhojpuri', '/songs/pandeyji ka.mp3')">Pandeyji ka Beta hoon</div>
+    
+  </div>
+  <div class="playlist" id="sad-bhojpuri">
+    <div class="song" onclick="playPause('sad-bhojpuri', '/songs/ja ja jaan.mp3')">Ab ja ja jaan</div>
+  </div>
+  <div class="playlist" id="excited-bhojpuri">
+    <div class="song" onclick="playPause('ecited-bhojpuri', '/songs/heroine.mp3')">Heroine</div>
+  </div>
+  <ul class="playlist" id="relaxed-bhojpuri">
+    <div class="song" onclick="playPause('relaxed-bhojpuri', '/songs/sato.mp3')">Sato Bhiniya Aili</div>
+  </div>
+</div>
+<script src="/js/mood-script.js"></script>
+</body>
+</html>
